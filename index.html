@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@600&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav
+            class="navbar navbar-dark bg-white align-items-start sidebar sidebar-white accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <div class="p-0"> <a
+                        class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0 mt-5 p-0"
+                        href="#"><img class="img-fluid" src="assets/img/brand.png"></a> </div>
+                <div class="side-nav-custom mt-5">
+                    <ul class="nav navbar-nav text-light mt-5" id="accordionSidebar-1">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html"><i
+                                    class="fal fa-home"></i><span>Home</span></a></li>
+                        <hr class="sidebar-divider">
+                        <div class="d-block master-nav">
+                            <p class="text-dark">Masters</p>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="doctor.html"><i
+                                        class="fal fa-user-md"></i><span>Doctors</span></a><a class="nav-link"
+                                    href="patients.html"><i class="fal fa-user-injured"></i><span>Patients</span></a>
+                            </li>
+                            <li class="nav-item" role="presentation"></li>
+                        </div>
+                        <hr class="sidebar-divider">
+                        <div class="d-block master-nav">
+                            <p class="text-dark">User Managment</p>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="user.html"><i
+                                        class="fal fa-users"></i><span>User</span></a><a class="nav-link "
+                                    href="role.html"><i class="fal fa-user-cog"></i><span>Role</span></a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="role-p.html"><i
+                                        class="fal fa-user-tag"></i><span>Role Privileges</span></a></li>
+                        </div>
+                        <hr class="sidebar-divider">
+                        <div class="d-block master-nav">
+                            <p class="text-dark">Configuration</p>
+                            <li class="nav-item" role="presentation"></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="common-setting.html"><i
+                                        class="fal fa-cog"></i><span>Common Setting</span></a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="text-center d-none d-md-inline"></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3"
+                            id="sidebarToggleTop" type="button"><i class="fal fa-bars"></i></button>
+                        <form
+                            class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                            <div class="input-group">
+                                <div class="input-group-prepend"> <button class="btn btn-primary py-0" type="button"><i
+                                            class="fal fa-search"></i></button> </div> <input
+                                    class="bg-light form-control border-0 small" type="text"
+                                    placeholder="Search for ...">
+                            </div>
+                        </form>
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                            <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link"
+                                    data-toggle="dropdown" aria-expanded="false" href="#"><i
+                                        class="fal fa-search"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="form-inline mr-auto navbar-search w-100">
+                                        <div class="input-group"><input class="bg-light form-control border-0 small"
+                                                type="text" placeholder="Search for ...">
+                                            <div class="input-group-append"><button class="btn btn-primary py-0"
+                                                    type="button"><i class="fal fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        data-toggle="dropdown" aria-expanded="false" href="#"><i
+                                            class="fal fa-envelope fa-fw"></i><span
+                                            class="badge badge-danger badge-counter">7</span></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                        role="menu">
+                                        <h6 class="dropdown-header">alerts center</h6> <a
+                                            class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle"
+                                                    src="assets/img/avatars/avatar4.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Hi there! I am wondering if you can
+                                                        help me with a problem I've been having.</span></div>
+                                                <p class="small text-gray-500 mb-0">Emily Fowler - 58m</p>
+                                            </div>
+                                        </a> <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle"
+                                                    src="assets/img/avatars/avatar2.jpeg">
+                                                <div class="status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>I have the photos that you ordered last
+                                                        month!</span></div>
+                                                <p class="small text-gray-500 mb-0">Jae Chun - 1d</p>
+                                            </div>
+                                        </a> <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle"
+                                                    src="assets/img/avatars/avatar3.jpeg">
+                                                <div class="bg-warning status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Last month's report looks great, I am
+                                                        very happy with the progress so far, keep up the good
+                                                        work!</span></div>
+                                                <p class="small text-gray-500 mb-0">Morgan Alvarez - 2d</p>
+                                            </div>
+                                        </a> <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="dropdown-list-image mr-3"><img class="rounded-circle"
+                                                    src="assets/img/avatars/avatar5.jpeg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div>
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate"><span>Am I a good boy? The reason I ask is
+                                                        because someone told me that people say this to all dogs, even
+                                                        if they aren't good...</span></div>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                                <div class="shadow dropdown-list dropdown-menu dropdown-menu-right"
+                                    aria-labelledby="alertsDropdown"></div>
+                            </li>
+                            <li class="nav-item dropdown no-arrow mx-1" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        data-toggle="dropdown" aria-expanded="false" href="#"><span
+                                            class="badge badge-danger badge-counter">3+</span><i
+                                            class="fal fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
+                                        role="menu">
+                                        <h6 class="dropdown-header">alerts center</h6> <a
+                                            class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-primary icon-circle"><i
+                                                        class="fal fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a> <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-success icon-circle"><i
+                                                        class="fal fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a> <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <div class="mr-3">
+                                                <div class="bg-warning icon-circle"><i
+                                                        class="fal fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We've noticed unusually high spending for your
+                                                    account.</p>
+                                            </div>
+                                        </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All
+                                            Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow" role="presentation">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link"
+                                        data-toggle="dropdown" aria-expanded="false" href="#"><img
+                                            class="img-fluid border rounded-circle img-profile"
+                                            src="assets/img/Ellipse%201.png"><span
+                                            class="d-none d-lg-inline mr-2 text-gray-600 small">Greetings..<br>Christeen
+                                            L..<br></span><span class="d-none d-lg-inline mr-2 text-gray-600 small"><i
+                                                class="fal fa-caret-down"></i></span></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                        <a class="dropdown-item" role="presentation" href="#"><i
+                                                class="fal fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a
+                                            class="dropdown-item" role="presentation" href="#"><i
+                                                class="fal fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                        <a class="dropdown-item" role="presentation" href="#"><i
+                                                class="fal fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity
+                                            log</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation"
+                                            href="#"><i
+                                                class="fal fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><span>&nbsp;<i
+                                        class="fal fa-home"></i>&nbsp;Home</span></a></li>
+                    </ol>
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Dashboard</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card card-1 border-0">
+                                <div class="card-body">
+                                    <div class="row d-flex justify-content-between align-items-center no-gutters">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="box"><i class="fal fa-users fa-2x "></i></div>
+                                        </div>
+                                        <div class="col-sm-5 col-md-5">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                                                <span class="doc-n"><strong>34,554</strong></span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>Total Users</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 rs-bg">
+                                            <div
+                                                class="text-uppercase text-primary d-inline-block font-weight-bold text-xs mb-1">
+                                                <img src="assets/img/grow-i.png"><span class="d-inline-block">20%</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card card-2 border-0">
+                                <div class="card-body">
+                                    <div class="row d-flex justify-content-between align-items-center no-gutters">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="box"><i class="fal fa-user-md fa-2x text-success "></i></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 col-md-5">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                                                <span class="doc-n text-success "><strong>34,554</strong></span></div>
+                                            <div class="font-weight-bold h5 mb-0"><span>Total Doctor</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 rs-bg">
+                                            <div
+                                                class="text-uppercase text-primary d-inline-block font-weight-bold text-xs mb-1">
+                                                <img src="assets/img/grow-i.png"><span class="d-inline-block">20%</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card card-3 border-0">
+                                <div class="card-body">
+                                    <div class="row d-flex justify-content-between align-items-center no-gutters">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="box"><i class="fal fa-user-injured fa-2x text-danger"></i></div>
+                                        </div>
+                                        <div class="col-sm-5 col-md-5">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                                                <span class="doc-n text-danger"><strong>34,554</strong></span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>Total Patient</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 rs-bg">
+                                            <div
+                                                class="text-uppercase text-primary d-inline-block font-weight-bold text-xs mb-1">
+                                                <img src="assets/img/grow-i.png"><span class="d-inline-block">20%</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card card-4 border-0">
+                                <div class="card-body">
+                                    <div class="row d-flex justify-content-between align-items-center no-gutters">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="box"><i class="fal fa-users fa-2x text-blue"></i></div>
+                                        </div>
+                                        <div class="col-sm-5 col-md-5">
+                                            <div class="text-uppercase text-primary font-weight-bold text-xs mb-1">
+                                                <span class="doc-n text-blue"><strong>34,554</strong></span></div>
+                                            <div class="text-dark font-weight-bold h5 mb-0"><span>Active User</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4 rs-bg">
+                                            <div
+                                                class="text-uppercase text-primary d-inline-block font-weight-bold text-xs mb-1">
+                                                <img src="assets/img/grow-i.png"><span class="d-inline-block">20%</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row graph">
+                        <div class="col-md-12 col-lg-7 col-xl-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Earnings Overview</h6>
+                                    <div class="fr">
+                                        <p>Short</p><select>
+                                            <optgroup label="This is a group">
+                                                <option value="12" selected="">By Month</option>
+                                                <option value="13">By Day</option>
+                                                <option value="14">By Year</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-body user-stat">
+                                    <div class=" chart-area">
+                                        <canvas
+                                            data-bs-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Total Users&quot;,&quot;fill&quot;:false,&quot;data&quot;:[&quot;0&quot;,&quot;5000&quot;,&quot;5000&quot;,&quot;5000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;30000&quot;,&quot;20500&quot;,&quot;50000&quot;,&quot;60000&quot;,&quot;50000&quot;,&quot;100000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgb(29,179,220)&quot;},{&quot;label&quot;:&quot;Total Doctors&quot;,&quot;fill&quot;:false,&quot;data&quot;:[&quot;0&quot;,&quot;400&quot;,&quot;400&quot;,&quot;3000&quot;,&quot;45000&quot;,&quot;3000&quot;,&quot;20000&quot;,&quot;20000&quot;,&quot;22000&quot;,&quot;81000&quot;,&quot;81000&quot;,&quot;60000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgb(53,213,80)&quot;},{&quot;label&quot;:&quot;Total Patients&quot;,&quot;fill&quot;:false,&quot;data&quot;:[&quot;0&quot;,&quot;7000&quot;,&quot;400&quot;,&quot;5000&quot;,&quot;45000&quot;,&quot;3000&quot;,&quot;13207&quot;,&quot;24000&quot;,&quot;22000&quot;,&quot;303&quot;,&quot;81000&quot;,&quot;47100&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgb(255,116,116)&quot;},{&quot;label&quot;:&quot;Active User&quot;,&quot;fill&quot;:false,&quot;data&quot;:[&quot;50&quot;,&quot;4000&quot;,&quot;80000&quot;,&quot;64000&quot;,&quot;23000&quot;,&quot;3000&quot;,&quot;13207&quot;,&quot;4587&quot;,&quot;22000&quot;,&quot;12465&quot;,&quot;23564&quot;,&quot;90000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgb(2,130,245)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false,&quot;reverse&quot;:false,&quot;position&quot;:&quot;bottom&quot;},&quot;title&quot;:{&quot;display&quot;:false,&quot;text&quot;:&quot;User Statcis&quot;,&quot;fontSize&quot;:&quot;15&quot;},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:false,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:true},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;beginAtZero&quot;:true,&quot;padding&quot;:20}}]}}}"></canvas>
+
+                                        <div class="d-block legend-area">
+                                            <ul class="legend-here d-flex justify-content-center">
+                                                <li class="text-primary">
+                                                    <i class="fas fa-circle"></i> <span class="text-legend">Total
+                                                        Users</span>
+                                                </li>
+                                                <li class="text-success">
+                                                    <i class="fas fa-circle"></i> <span class="text-legend">Total
+                                                        Users</span>
+                                                </li>
+                                                <li class="text-danger">
+                                                    <i class="fas fa-circle"></i> <span class="text-legend">Total
+                                                        Users</span>
+                                                </li>
+                                                <li class="text-blue">
+                                                    <i class="fas fa-circle"></i> <span class="text-legend">Total
+                                                        Users</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-5 col-xl-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary font-weight-bold m-0">Memberships</h6>
+                                    <div class="fr">
+                                        <p>Short</p><select>
+                                            <optgroup label="This is a group">
+                                                <option value="12" selected="">All</option>
+                                                <option value="13">By Day</option>
+                                                <option value="14">By Year</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-body membership">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8">
+                                            <h4>Michale Jordan</h4>
+                                            <p>&nbsp;<i class="fal fa-user-nurse"></i>&nbsp;Doctor</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4"><button class="btn btn-pro" type="button">PRO</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8">
+                                            <h4>Michale Jordan</h4>
+                                            <p>&nbsp;<i class="fal fa-user-nurse"></i>&nbsp;Patient</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4"><button class="btn btn-free" type="button">Free</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8">
+                                            <h4>Michale Jordan</h4>
+                                            <p>&nbsp;<i class="fal fa-user-nurse"></i>&nbsp;Doctor</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4"><button class="btn btn-pro" type="button">PRO</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8">
+                                            <h4>Michale Jordan</h4>
+                                            <p>&nbsp;<i class="fal fa-user-nurse"></i>&nbsp;Patient</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4"><button class="btn btn-free" type="button">Free</button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 col-md-8">
+                                            <h4>Michale Jordan</h4>
+                                            <p>&nbsp;<i class="fal fa-user-nurse"></i>&nbsp;Doctor</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4"><button class="btn btn-pro" type="button">PRO</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row total-ac">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Total Paid Users</h4>
+                                    <div class="wykresy">
+                                        <div id="chart1"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-primary">20,455</h5>
+                                            <p>Total User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-primary">10,237</h5>
+                                            <p>Paid User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-primary">45,489</h5>
+                                            <p>Revenue</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Total Paid Users</h4>
+                                    <div class="wykresy">
+                                        <div id="chart2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-success">20,455</h5>
+                                            <p>Total User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-success">10,237</h5>
+                                            <p>Paid User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-success">45,489</h5>
+                                            <p>Revenue</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>Total Paid Users</h4>
+                                    <div class="wykresy">
+                                        <div id="chart3"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-danger">20,455</h5>
+                                            <p>Total User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-danger">10,237</h5>
+                                            <p>Paid User</p>
+                                        </div>
+                                        <div class="col-sm-4 col-md-4">
+                                            <h5 class="text-danger">45,489</h5>
+                                            <p>Revenue</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div></div>
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center py-4">
+                                    <h6 class="text-primary font-weight-bold m-0">Recent Payment</h6>
+                                    <div class="fr">
+                                        <p>Short</p><select>
+                                            <optgroup label="This is a group">
+                                                <option value="12" selected="">By Paypal</option>
+                                                <option value="13">Payoneer</option>
+                                                <option value="14">Bank</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn  dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Full Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Role</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Method</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Date/Time</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Amount&nbsp;</a>
+
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>Jordan Maximus</td>
+                                                    <td>Doctor</td>
+                                                    <td>Paypal</td>
+                                                    <td>21.05.2020 - 14:20</td>
+                                                    <td>$250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>Jordan Maximus</td>
+                                                    <td>Doctor</td>
+                                                    <td>Paypal</td>
+                                                    <td>21.05.2020 - 14:20</td>
+                                                    <td>$250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>Jordan Maximus</td>
+                                                    <td>Doctor</td>
+                                                    <td>Paypal</td>
+                                                    <td>21.05.2020 - 14:20</td>
+                                                    <td>$250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>Jordan Maximus</td>
+                                                    <td>Doctor</td>
+                                                    <td>Paypal</td>
+                                                    <td>21.05.2020 - 14:20</td>
+                                                    <td>$250</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>Jordan Maximus</td>
+                                                    <td>Doctor</td>
+                                                    <td>Paypal</td>
+                                                    <td>21.05.2020 - 14:20</td>
+                                                    <td>$250</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card today-r">
+                                <div class="card-header">
+                                    <h6 class="text-center  ">Todays Revenue</h6>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <h3>5,455</h3>
+                                            <p>Total Purcehed</p>
+                                        </div>
+                                        <div class="col text-center">
+                                            <h3>20,455</h3>
+                                            <p>Total Revenue</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card p-0 mt-3 mb-sm-2">
+                                <div class="card-body p-0">
+                                    <div class="row p-0">
+                                        <div class="col"><img class="img-fluid mal" src="assets/img/Group%202.png" style="height: 248px;
+                                            width: 100%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Doctors</h4>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-search"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Doctor By Name">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-birthday-cake"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Doctor By Date Of Birth">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-envelope"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Doctor By Email">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-mobile"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Doctor By Email">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive mt-3">
+                                        <table class="table table-striped">
+                                            <caption><a href="#" class="text-primary">View All&nbsp;<i
+                                                        class="fal fa-long-arrow-alt-right ml-2"></i></a></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">User Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">First Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Last Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Email</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Status</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Action</a>
+
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Patients</h4>
+                                </div>
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-search"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Patients By Name">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-birthday-cake"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Patients By Date Of Birth">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-envelope"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Patients By Email">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                                            class="fal fa-mobile"></i></span></div><input
+                                                    class="form-control" type="text"
+                                                    placeholder="Search Patients By Email">
+                                                <div class="input-group-append"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive mt-3">
+                                        <table class="table table-striped">
+                                            <caption><a href="#" class="text-primary">View All&nbsp;<i
+                                                        class="fal fa-long-arrow-alt-right ml-2"></i></a></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"></th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">User Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">First Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Last Name</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Email</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Status</a>
+
+                                                        </div>
+                                                    </th>
+                                                    <th>
+                                                        <div class="dropdown"><a class="btn dropdown-toggle"
+                                                                data-toggle="dropdown" aria-expanded="false"
+                                                                role="button">Action</a>
+
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="checkbox"></td>
+                                                    <td>NoobMaster69</td>
+                                                    <td>Jordan</td>
+                                                    <td>Chirstofer</td>
+                                                    <td>michalejordan232@gmail</td>
+                                                    <td><a href="#" class="btn-active"><i
+                                                                class="fas fa-circle"></i>&nbsp;Active</a></td>
+                                                    <td>
+                                                        <div class="d-inline-block"><i class="fal fa-pen"></i></div>
+                                                        <div class="d-inline-block"><i class="fal fa-trash"></i></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fal fa-angle-up"></i></a>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/CircularProgressBar.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
